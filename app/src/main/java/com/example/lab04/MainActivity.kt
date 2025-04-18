@@ -69,4 +69,15 @@ fun FloatingActionButtonDemo() {
     )
 }
 
+@Composable
+fun OutlinedTextFieldDemo() {
+    var text by remember { mutableStateOf("") }
+
+    OutlinedTextField(
+        value = text,
+        onValueChange = { text = it },
+        label = { Text("Nombre") },
+        modifier = Modifier.padding(16.dp)
+    )
+}
 
