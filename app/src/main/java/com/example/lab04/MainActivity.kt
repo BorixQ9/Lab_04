@@ -54,3 +54,19 @@ fun LazyColumnDemo() {
         }
     }
 }
+
+@Composable
+fun FloatingActionButtonDemo() {
+    Scaffold(
+        floatingActionButton = {
+            FloatingActionButton(onClick = { /* acción */ }) {
+                Icon(Icons.Default.Add, contentDescription = "Agregar")
+            }
+        },
+        content = { padding ->
+            Text("Contenido principal", modifier = Modifier.padding(padding))
+        }
+    )
+}
+
+
